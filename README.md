@@ -18,11 +18,9 @@ Clone this repository, and run the following commands in the terminal:
 
 * `$ node sort.js short_list.txt`
 
-* `$ node sort.js medium_list.txt`
-
 * `$ node sort.js long_list.txt`
 
 2) For the series of exercises:
 
-* `$ node exercise_01.js`
+* `$ node exercise_01.js` (obviously replacing the exercise number with the one you wish to test)
 

@@ -1,6 +1,6 @@
 const hasWestView = (array) => {
   let numbers = [...array];
-  let hasView = 0;
+  let getsSun = 0;
   let currentMaxValue;
   let currentValue;
   
@@ -16,9 +16,11 @@ const hasWestView = (array) => {
       }
       j++;
     }
-    if (currentMaxValue) hasView++;
+    if (currentMaxValue) {
+      getsSun++;
+    }
   }
-  return hasView;
+  return getsSun;
 }
 
 console.log(hasWestView([3, 7, 8, 3, 6, 1])); // should return 3

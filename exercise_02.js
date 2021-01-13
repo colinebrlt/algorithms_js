@@ -1,6 +1,6 @@
 const hasWestView = (array) => {
   let numbers = [...array];
-  let hasView = 0;
+  let getsSun = 0;
   let currentMaxValue;
   let currentValue;
   
@@ -13,11 +13,26 @@ const hasWestView = (array) => {
         break;
       }
     }
-    if (currentMaxValue) hasView++;
+    if (currentMaxValue) {
+      getsSun++;
+    }
   }
-  return hasView;
+  return getsSun;
 }
 
-console.log(hasWestView([3, 7, 8, 3, 6, 1]));
-console.log(hasWestView([1, 4, 5, 8]));
+console.log(hasWestView([3, 7, 8, 3, 6, 1])); // should return 3
+console.log(hasWestView([1, 4, 5, 8])); // should return 1
 
+// const hasWestView = (array) => {
+//   let count = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = i + 1; j < array.length; j++) {
+//       if (array[j] > array[i]) {
+//         i = j
+//       }
+//     }
+//     count++;
+//   }
+//   return count
+// }
+// });
