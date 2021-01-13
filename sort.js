@@ -76,6 +76,3 @@ const mergeSort = (array) => {
   numbers = sortSplit(array, middle);
   console.log(`3) Tri fusion : ${count} comparaisons - [${numbers}]`);
 }
-
-
-
