@@ -1,10 +1,10 @@
 # COMPLEX ALGORITHMS
 
-This project is a set of 3 algorithms built to sort a list of unsorted numbers. 
+This project is a set of 3 Javascript algorithms built to sort a list of unsorted numbers. 
 
 ## Specifications
 
-The 4 algorithms implemented are: 
+The 3 algorithms implemented are: 
 
 * Bubble sort: https://en.wikipedia.org/wiki/Bubble_sort
 * Insertion sort: https://en.wikipedia.org/wiki/Insertion_sort
@@ -12,7 +12,7 @@ The 4 algorithms implemented are:
 
 ## How to use
 
-Clone this repository, and run the following in the terminal:
+Clone this repository, and run the following commands in the terminal:
 
 * `$ node sort.js short_list.txt`
 

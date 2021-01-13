@@ -10,7 +10,8 @@ fs.readFile(fileName, 'utf8', (error, data) => {
     console.log(data);
     const unsortedList = data.split(" ").map(num => parseInt(num, 10))
     bubbleSort(unsortedList);
-    insertionSort(unsortedList)
+    insertionSort(unsortedList);
+    mergeSort(unsortedList);
 });
 
 // TRI À BULLE
@@ -49,8 +50,30 @@ const insertionSort = (array) => {
 
 // TRI FUSION
 
-const fusionSort = (array) => {
-  
+const mergeSort = (array) => {
+  let count = 0;
+  let numbers = [...array];
+  let middle;
+
+  const merge = (left, right) => {
+    let array = [];
+    while (left.length && right.length) {
+      if (left[0] < right[0]) {
+        array.push(left.shift()); 
+      } else {
+        array.push(right.shift()); 
+      }
+    }
+    return [...array, ...left, ...right];
+  };
+
+  const sortSplit = (numbers, middle = numbers.length / 2) => {
+    count++;
+    if (numbers.length < 2) return numbers;
+    let left = numbers.splice(0, middle);
+    return merge(sortSplit(left), sortSplit(numbers));
+  };
+  numbers = sortSplit(array, middle);
   console.log(`3) Tri fusion : ${count} comparaisons - [${numbers}]`);
 }
 
