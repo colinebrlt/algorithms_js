@@ -10,4 +10,5 @@ const isSum = (numbers, target) => {
   return numbersToCompare.length > 0 ? true : false;
 };
 
-console.log(isSum([10, 15, 3, 7], 13));
+console.log(isSum([10, 15, 3, 7], 17));
+console.log(isSum([1, 8, 10, 21], 21));

@@ -1,16 +1,26 @@
-const buildings_list = [3, 7, 8, 3, 6, 1]
+const hasWestView = (array) => {
+  let numbers = [...array];
+  let hasView = 0;
+  let currentMaxValue;
+  let currentValue;
+  
+  for (let i = 0; i < numbers.length; i++) {
+    currentMaxValue = true;
+    currentValue = numbers[i];
 
-getSunset = buildings => {
-  let buildingsWithSunset = []
-
-  buildingsWithSunset.push(buildings[buildings.length-1])
-  for (let i = buildings.length; i >= 0; i--) {
-    if (buildings[i] < buildings[i - 1]){
-      buildingsWithSunset.push(buildings[i - 1]);
+    let j = i + 1;
+    while (currentMaxValue && j < numbers.length) {
+      if (numbers[j] >= currentValue) {
+        currentMaxValue = false;
+        i = j - 1;
+      }
+      j++;
     }
+    if (currentMaxValue) hasView++;
   }
-
-  return buildingsWithSunset.length
+  return hasView;
 }
 
-console.log(getSunset(buildings_list))
+console.log(hasWestView([3, 7, 8, 3, 6, 1])); // should return 3
+console.log(hasWestView([1, 4, 5, 8])); // should return 1
+
